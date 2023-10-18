@@ -104,6 +104,9 @@
      wget
      git
      lshw
+     ntfs3g
+     google-chrome
+     spectacle
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -189,5 +192,8 @@
     # Optimus PRIME Option B: Sync Mode
     sync.enable = true;
   };
+
+  # NTFS Support
+  boot.kernelModules = [ "ntfs3" "ntfs" ];
  
 }

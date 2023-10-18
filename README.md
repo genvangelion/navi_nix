@@ -1,1 +1,1 @@
-# navi_nixos
+# navi_nix

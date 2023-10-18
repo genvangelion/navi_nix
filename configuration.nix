@@ -89,7 +89,7 @@
   users.users.genvangelion = {
     isNormalUser = true;
     description = "Genesis Montejo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       kate
@@ -108,12 +108,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
-     lshw
-     ntfs3g
-     google-chrome
-     spectacle
+     wget git lshw ntfs3g google-chrome spectacle vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -202,5 +197,8 @@
 
   # NTFS Support
   boot.kernelModules = [ "ntfs3" "ntfs" ];
- 
+  
+  # Docker + Docker Compose
+  virtualisation.docker.enable = true;
+   
 }

@@ -5,13 +5,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
- 
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -148,7 +141,7 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services.blueman.enable = true; # GUI
 
-  # NVIDIA Configuration:
+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  # NVIDIA Configuration:
 
   # Enable OpenGL
   hardware.opengl = {

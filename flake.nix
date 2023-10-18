@@ -1,5 +1,4 @@
-  GNU nano 7.2                                            flake.nix                                             Modified  
-# /etc/nixos/flake.nix
+# etc/nixos/flake.nix
 {
   description = "flake for nixos";
 

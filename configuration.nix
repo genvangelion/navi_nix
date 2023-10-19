@@ -191,8 +191,14 @@
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
     
-    # Optimus PRIME Option B: Sync Mode
-    sync.enable = true;
+    # Optimus PRIME:
+
+    # Sync Mode
+    # sync.enable = true;
+
+    # Reverse sync mode
+    reverseSync.enable = true;
+    allowExternalGpu = false;
   };
 
   # NTFS Support

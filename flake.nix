@@ -6,9 +6,12 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
+    nixpkgs-python = {
+      url = "github:cachix/nixpkgs-python";
+    };
   };  
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, nixpkgs-python }: {
     nixosConfigurations = {
       navi = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

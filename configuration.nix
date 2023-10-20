@@ -108,7 +108,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget git lshw ntfs3g google-chrome spectacle xorg.xkill vscodium
+     wget git lshw ntfs3g google-chrome spectacle xorg.xkill vscodium python3 python310Packages.pip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -194,12 +194,15 @@
     # Optimus PRIME:
 
     # Sync Mode
-    # sync.enable = true;
+    sync.enable = true;
 
     # Reverse sync mode
-    reverseSync.enable = true;
-    allowExternalGpu = false;
+    # reverseSync.enable = true;
+    # allowExternalGpu = false;
   };
+
+  # Screen tearing
+  hardware.nvidia.forceFullCompositionPipeline = true;
 
   # NTFS Support
   boot.kernelModules = [ "ntfs3" "ntfs" ];

@@ -98,8 +98,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "genvangelion";
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "genvangelion";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

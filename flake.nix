@@ -1,6 +1,6 @@
 # etc/nixos/flake.nix
 {
-  description = "flake for nixos";
+  description = "flake for navi";
 
   inputs = {
     nixpkgs = {
@@ -10,7 +10,7 @@
 
   outputs = { self, nixpkgs }: {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      navi = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix

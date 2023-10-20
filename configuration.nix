@@ -17,11 +17,11 @@
       ./hardware-configuration.nix
     ];
 
-# Bootloader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "navi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -108,7 +108,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget git lshw ntfs3g google-chrome spectacle vscode
+     wget git lshw ntfs3g google-chrome spectacle xorg.xkill vscodium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -206,5 +206,7 @@
   
   # Docker + Docker Compose
   virtualisation.docker.enable = true;
-   
+  
+  # Enable flatpak
+  services.flatpak.enable = true;
 }

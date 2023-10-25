@@ -106,10 +106,22 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget git lshw ntfs3g google-chrome spectacle xorg.xkill vscodium python3 python310Packages.pip
-  ];
+     wget 
+     git 
+     lshw 
+     ntfs3g 
+     google-chrome   
+     spectacle 
+     xorg.xkill 
+     vscodium 
+     python3 
+     (python310.withPackages(ps: with ps; [ pip pandas requests ipykernel ipython ]))
+     spotify 
+     libsForQt5.bismuth
+ ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

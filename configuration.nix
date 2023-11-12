@@ -114,13 +114,15 @@
      lshw 
      ntfs3g 
      google-chrome   
-     spectacle 
+     #spectacle 
      xorg.xkill 
      vscodium 
      python3 
      (python310.withPackages(ps: with ps; [ pip pandas requests ipykernel ipython ]))
      spotify 
      libsForQt5.bismuth
+     flameshot
+     vscode
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -224,4 +226,7 @@
   
   # Enable flatpak
   services.flatpak.enable = true;
+
+  # vscode-server
+  services.vscode-server.enable = true;
 }

@@ -118,11 +118,13 @@
      xorg.xkill 
      vscodium 
      python3 
-     (python310.withPackages(ps: with ps; [ pip pandas requests ipykernel ipython ]))
      spotify 
      libsForQt5.bismuth
      flameshot
      vscode
+     htop
+     poetry
+     tmux
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -229,4 +231,7 @@
 
   # vscode-server
   services.vscode-server.enable = true;
+
+
+
 }

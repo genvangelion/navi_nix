@@ -125,6 +125,10 @@
      htop
      poetry
      tmux
+     (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [ wlrobs obs-backgroundremoval obs-pipewire-audio-capture
+       ];
+     })
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -232,6 +236,11 @@
   # vscode-server
   services.vscode-server.enable = true;
 
-
+  # auto mount GDATA
+  fileSystems."/mnt/mydata" = {
+    device = "/dev/sda2";
+    fsType = "ntfs";
+    options = [ "defaults" ];
+  };
 
 }
